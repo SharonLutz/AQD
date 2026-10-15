@@ -1,0 +1,32 @@
+Package: AQD
+Title: Model Selection with the Approximate Quasi-Deviance
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Sharon", "Lutz", email = "smlutz@hsph.harvard.edu", role = c("aut", "cre")),
+    person("Adam", "Reeson", role = "aut"))
+Description: Exhaustive variable selection using approximate quasi-deviance
+    (AQD) criteria, which require only the mean-variance relationship of the
+    outcome. For every subset of candidate covariates, the AQD criteria
+    AQD(y), AQD(mu) and the higher-order AQD-opt3 are computed alongside a
+    baseline AIC and, optionally, the exact-likelihood AIC. Supports Gaussian,
+    Tweedie, Conway-Maxwell-Poisson, quasi-Poisson, negative binomial, gamma,
+    inverse Gaussian, binomial and beta outcomes.
+License: GPL-2
+URL: https://github.com/SharonLutz/AQD
+BugReports: https://github.com/SharonLutz/AQD/issues
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Imports:
+    MASS,
+    methods,
+    parallel,
+    stats,
+    stats4,
+    utils
+Suggests:
+    betareg,
+    COMPoissonReg,
+    cplm,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Config/roxygen2/version: 8.0.0
