@@ -76,9 +76,3 @@ The working model (which gives the fitted means used by AQD) is a quasi-Poisson 
 -   **Input checks.** Rows with missing values are dropped; constant or collinear covariates stop with a message naming them; character covariates are treated as factors; column names may contain spaces or symbols.
 -   **Failed fits.** Failed or non-converged fits get criterion Inf (never selected) and are counted in `fit$failures`; per-model warnings are counted, not printed.
 -   **Run time.** Exhaustive search grows as 2\^p: 12 covariates = 4,096 models. Use `n_cores` (macOS/Linux) to run models in parallel.
-
-## Reproducing the paper's data application
-
-`run_copd.R` (in the package folder, not installed with the package) reproduces the COPDGene coronary artery calcium analysis. It needs the COPDGene data file `CACnhw.txt`, which is not distributed with the package. It gives p = 1.620, φ = 14.190 and the same selected covariates as the original analysis for LM AIC, AQD(y), AQD(mu) and AQD-opt3.
-
-`run_simulated.R` runs an example for each of the nine families.
